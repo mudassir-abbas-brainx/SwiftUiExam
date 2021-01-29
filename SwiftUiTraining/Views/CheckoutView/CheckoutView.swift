@@ -15,9 +15,10 @@ struct CheckoutView: View {
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1
     @State private var showingPaymentAlert = false
+    @State private var orderSchedule = 0
     static let paymentTypes = ["Cash","Credit Card", "iDine Points"]
     static let tipAmounts = [10,15,20,25,0]
-    
+    static let orderSchedules = ["Now","Tonight","Tomorrow Morning"]
     var totalPrice: Double{
         let total = Double(order.total)
         let tipValue = total / 100 * Double(Self.tipAmounts[tipAmount])
@@ -51,6 +52,14 @@ struct CheckoutView: View {
                 }.pickerStyle(SegmentedPickerStyle())
             }
             
+            Section(header: Text("Pickup time"), content: {
+                Picker("Pickup time", selection: $orderSchedule){
+                    ForEach(0 ..< Self.orderSchedules.count){
+                        Text(Self.orderSchedules[$0])
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+            })
+            
             Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")")
                         .font(.largeTitle)) {
                 Button(action: {
@@ -58,16 +67,19 @@ struct CheckoutView: View {
                 }, label: {
                     Text("Confirm Order")
                         .fontWeight(.bold)
+                        .frame(minWidth: 0, maxWidth: .infinity,minHeight: 50,maxHeight: 50)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
                         .foregroundColor(Color.white)
                         .cornerRadius(40)
                         .padding(10)
+                        
                     
                 })
             }
             
+                
             .alert(isPresented: $showingPaymentAlert, content: {
-                Alert(title: Text("Order confirmed"), message: Text("Your total was $\(totalPrice,specifier: "%.2f")"), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Order confirmed"), message: Text("Your total was $\(totalPrice,specifier: "%.2f") at \(Self.orderSchedules[orderSchedule])"), dismissButton: .default(Text("OK")))
             })
         }
         .navigationBarTitle(Text("Payment"), displayMode: .inline)

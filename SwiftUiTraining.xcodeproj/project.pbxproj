@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7974D4725C3EF5D00BA64F3 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7974D4625C3EF5D00BA64F3 /* CheckoutView.swift */; };
+		C7974D5025C4512B00BA64F3 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7974D4F25C4512B00BA64F3 /* FavouriteView.swift */; };
 		C7A4489E25C2DB7100E9ED14 /* SwiftUiTrainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A4489D25C2DB7100E9ED14 /* SwiftUiTrainingApp.swift */; };
 		C7A448A025C2DB7100E9ED14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A4489F25C2DB7100E9ED14 /* ContentView.swift */; };
 		C7A448A225C2DB7300E9ED14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A448A125C2DB7300E9ED14 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		C7974D4625C3EF5D00BA64F3 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		C7974D4F25C4512B00BA64F3 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		C7A4489A25C2DB7100E9ED14 /* SwiftUiTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUiTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A4489D25C2DB7100E9ED14 /* SwiftUiTrainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiTrainingApp.swift; sourceTree = "<group>"; };
 		C7A4489F25C2DB7100E9ED14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 				C7974D4625C3EF5D00BA64F3 /* CheckoutView.swift */,
 			);
 			path = CheckoutView;
+			sourceTree = "<group>";
+		};
+		C7974D4E25C4511100BA64F3 /* FavouriteView */ = {
+			isa = PBXGroup;
+			children = (
+				C7974D4F25C4512B00BA64F3 /* FavouriteView.swift */,
+			);
+			path = FavouriteView;
 			sourceTree = "<group>";
 		};
 		C7A4489125C2DB7100E9ED14 = {
@@ -169,11 +179,12 @@
 		C7A448CC25C2DBEA00E9ED14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7974D4525C3EF4700BA64F3 /* CheckoutView */,
 				C7A4490425C2F83A00E9ED14 /* AppView */,
 				C7A448E425C2E0F900E9ED14 /* ListView */,
 				C7A448ED25C2E6AB00E9ED14 /* DetailView */,
 				C7A448F625C2F30B00E9ED14 /* OrderView */,
+				C7974D4525C3EF4700BA64F3 /* CheckoutView */,
+				C7974D4E25C4511100BA64F3 /* FavouriteView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 				C7A4489E25C2DB7100E9ED14 /* SwiftUiTrainingApp.swift in Sources */,
 				C7A448D925C2DC9B00E9ED14 /* Order.swift in Sources */,
 				C7A448EF25C2E6CE00E9ED14 /* DetailView.swift in Sources */,
+				C7974D5025C4512B00BA64F3 /* FavouriteView.swift in Sources */,
 				C7A448E625C2E11800E9ED14 /* ItemRow.swift in Sources */,
 				C7A448CF25C2DC7200E9ED14 /* Helper.swift in Sources */,
 				C7A448DA25C2DC9B00E9ED14 /* Menu.swift in Sources */,

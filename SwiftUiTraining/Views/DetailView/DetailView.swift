@@ -38,13 +38,14 @@ struct DetailView: View {
                     .cornerRadius(40)
                     .foregroundColor(Color.white)
                     .padding(10)
-                    
+//                    .frame(minWidth: 0, maxWidth: .infinity)
                     .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.purple, lineWidth: 5))
                     
             })
             Spacer()
         }
         .navigationBarTitle(Text(item.name), displayMode: .inline)
+        .navigationBarItems(trailing: EditButton())
     }
 }
 
